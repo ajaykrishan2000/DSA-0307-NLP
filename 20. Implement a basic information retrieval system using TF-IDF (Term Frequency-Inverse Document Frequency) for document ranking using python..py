@@ -1,5 +1,7 @@
+import sklearn.feature_extraction.text
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
+
 documents = [
     "The quick brown fox jumps over the lazy dog",
     "A brown dog jumped over a fox",
@@ -7,6 +9,7 @@ documents = [
     "The cat is black",
     "A black cat and a brown dog are friends",
 ]
+
 query = "quick brown fox"
 tfidf_vectorizer = TfidfVectorizer()
 tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
